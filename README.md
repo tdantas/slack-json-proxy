@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tdantas/slack-json-proxy.svg?branch=master)](https://travis-ci.org/tdantas/slack-json-proxy)
+
 # slack-json-proxy
 
 Slack JSON Proxy will map your `JSON payload` to `application/x-www-form-urlencoded`
