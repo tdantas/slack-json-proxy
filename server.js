@@ -8,7 +8,7 @@ if (process.env.DEBUG)
   require('request-debug')(request);
 
 const server = module.exports = new Hapi.Server();
-server.connection({port: process.env.PORT});
+server.connection({port: process.env.PORT || 3009 });
 
 server.route({
   method: '*',
