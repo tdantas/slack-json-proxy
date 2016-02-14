@@ -30,10 +30,10 @@ Slack JSON Proxy will map your `JSON payload` to `application/x-www-form-urlenco
  
  
 ```  
- PROXY_ENDPOINT=http://example.com   
+ PROXY_ENDPOINT=http://slack.com/api   
  
- https://example.com/api/api.test  -> https://example.com/api/api.test   
- https://example.com/auth.test    -> https://example.com/auth.test   
+ https://host/api/api.test  -> https://slack.com/api/api.test   
+ https://host/auth.test    -> https://slack.com/auth.test   
 
 ```
 
