@@ -49,39 +49,21 @@ describe('SLACK Proxy', () => {
   
     it(`${method} complex payload`, (done) => {
       const payload = {
-        token: random(),
-        channel: random(),
-        text: random(),
-        attachments:[
-          {
-            fallback: "Required plain-text summary of the attachment.",
-            color: "#36a64f",
-            pretext: "Optional text that appears above the attachment block",
-            author_name: "Bobby Tables",
-            author_link: "http://flickr.com/bobby/",
-            author_icon: "http://flickr.com/icons/bobby.jpg",
-            title: "Slack API Documentation",
-            title_link: "https://api.slack.com/",
-            text: "Optional text that appears within the attachment",
-            fields: [
-                {
-                    title: "Priority",
-                    value: "High",
-                    short: false
-                }
-            ],
-            image_url: "http://my-website.com/path/to/image.jpg",
-            thumb_url: "http://example.com/path/to/thumb.png"
-          }  
-       ]
+        token: 'token',
+        channel: 'channel',
+        text: 'text',
+        attachments:[{ fallback: "fallbackurl" }]
       };
 
       const urlPath = `/api/chat.postMessage`;
       const response = { ok: random() };
 
+      // https://api.slack.com/methods/chat.postMessage/test
+      const slackExpected = 'token=token&channel=channel&text=text&attachments=%5B%7B%22fallback%22%3A%22fallbackurl%22%7D%5D';
+
       nock(PROXY_ENDPOINT)
         .matchHeader('content-type', /x-www-form-urlencoded/)
-        .post(urlPath, qs(payload))
+        .post(urlPath, slackExpected)
         .reply(200, response);
 
       const opts = {method: method};
