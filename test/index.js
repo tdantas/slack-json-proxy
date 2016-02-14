@@ -4,7 +4,7 @@ const nock = require('nock');
 
 nock.disableNetConnect();
 
-require('dotenv').load({ path: path.resolve(__dirname, '.env') });
+require('dotenv').load({ path: path.resolve(__dirname, '.env.test') });
 const server = require('../server');
 
 const qs = require('../qs');
