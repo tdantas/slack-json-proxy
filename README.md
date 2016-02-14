@@ -26,7 +26,7 @@ Slack JSON Proxy will map your `JSON payload` to `application/x-www-form-urlenco
   
 ### How the mapping works ?
 
- every path you request will be mapped to PROXY_ENDPOINT/PATH  
+ every `path` you request will be mapped to PROXY_ENDPOINT/`path`  
  
  
 ```  
