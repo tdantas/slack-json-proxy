@@ -1,0 +1,22 @@
+{
+  "name": "slack-proxy-full",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha test/**"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^2.0.0",
+    "hapi": "^13.0.0",
+    "lodash": "^4.3.0",
+    "nock": "7.0.1",
+    "request": "^2.69.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.4.5",
+    "request-debug": "^0.2.0"
+  }
+}
