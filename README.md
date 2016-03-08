@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/tdantas/slack-json-proxy.svg?branch=master)](https://travis-ci.org/tdantas/slack-json-proxy)
+![slack community](https://img.shields.io/badge/slack%20community-approved-green.svg)
 
 # slack-json-proxy
 
